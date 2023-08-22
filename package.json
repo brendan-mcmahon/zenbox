@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.1441.0",
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5",
     "pg": "^8.11.3"
   }
 }
