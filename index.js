@@ -3,6 +3,8 @@ const simpleParser = require('mailparser').simpleParser;
 const AWS = require('aws-sdk');
 const secretsManager = new AWS.SecretsManager();
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+
 async function getSecret(secretName) {
   try {
       const data = await secretsManager.getSecretValue({ SecretId: secretName }).promise();
